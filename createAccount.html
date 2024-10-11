@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styless.css">
+    <title>Create Account</title>
+</head>
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="lab.html">Lab</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Create Account</h2>
+        <form action="submit_account.php" method="POST" enctype="multipart/form-data">
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            
+            <label for="username">Tên người dùng:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="role">Vai trò:</label>
+            <select id="role" name="role" required>
+                <option value="user">Người dùng</option>
+                <option value="admin">Quản trị viên</option>
+            </select>
+            
+            <label for="avatar">Ảnh đại diện:</label>
+            <input type="file" id="avatar" name="avatar" accept="image/*">
+            
+            <label for="created_at">Tài khoản được tạo lúc:</label>
+            <input type="text" id="created_at" name="created_at" value="" readonly>
+            
+            <label for="updated_at">Lần cập nhật cuối cùng:</label>
+            <input type="text" id="updated_at" name="updated_at" value="" readonly>
+            
+            <button type="submit">Tạo tài khoản</button>
+            <button type="button" onclick="cancel()">Hủy</button>
+        </form>
+    </main>
+
+    <script>
+        // Tự động điền ngày giờ hiện tại
+        const now = new Date();
+        const formattedDate = now.toLocaleString('vi-VN');
+        document.getElementById('created_at').value = formattedDate;
+        document.getElementById('updated_at').value = formattedDate;
+
+        function cancel() {
+            // Điều hướng về trang trước đó hoặc thực hiện hành động khác
+            window.history.back();
+        }
+
+        function previewImage() {
+            const file = document.getElementById('avatar').files[0];
+            const preview = document.getElementById('avatar-preview');
+            const reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+                preview.style.display = 'block'; // Hiện ảnh khi đã chọn
+            }
+
+            if (file) {
+                reader.readAsDataURL(file); // Đọc file và hiển thị dưới dạng URL
+            } else {
+                preview.src = ""; // Xóa preview nếu không có file
+                preview.style.display = 'none'; // Ẩn ảnh
+            }
+        }
+    </script>
+</body>
+</html>
+
+

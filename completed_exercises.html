@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments completed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="completed-exercises-container">
+        <h2>Assignments Completed</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Assignment Name</th>
+                    <th>Homework Time</th>
+                    <th>Submission Time</th>
+                </tr>
+            </thead>
+            <tbody id="completedExercisesList">
+                <!-- Danh sách bài tập sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+
+        <div class="back-container">
+            <a href="home.html" class="back-icon">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        // Dữ liệu bài tập đã hoàn thành (thay thế bằng dữ liệu thực tế từ các bài tập)
+        const completedExercises = [
+            { language: 'Java', exerciseName: 'Exercise1', timeSpent: '10 minute', submissionTime: '2024-10-01 14:00' },
+            { language: 'C', exerciseName: 'Exercise2', timeSpent: '15 minute', submissionTime: '2024-10-02 10:30' },
+            { language: 'Python', exerciseName: 'Exercise3', timeSpent: '12 minute', submissionTime: '2024-10-03 16:45' },
+            { language: 'Python', exerciseName: 'Exercise2', timeSpent: '12 minute', submissionTime: '2024-10-05 20:12' },
+            { language: 'C', exerciseName: 'Exercise1', timeSpent: '12 minute', submissionTime: '2024-10-07 18:31' },
+        ];
+
+        const exercisesList = document.getElementById('completedExercisesList');
+
+        // Thêm bài tập vào bảng
+        completedExercises.forEach(exercise => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${exercise.language}</td>
+                <td>${exercise.exerciseName}</td>
+                <td>${exercise.timeSpent}</td>
+                <td>${exercise.submissionTime}</td>
+            `;
+            exercisesList.appendChild(row);
+        });
+    </script>
+</body>
+</html>
+

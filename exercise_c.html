@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Danh sách bài tập cho ngôn ngữ lập trình đã chọn.">
+    <title>Exercise Code</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main class="content-container">
+        <section class="exercise-list">
+            <h2>Exercise-list</h2>
+            <ul>
+                <li><a href="#" class="exercise-item" onclick="loadCode('C++_ex1')">Exercise1: Print out "Hello, World!</a></li>
+                <li><a href="#" class="exercise-item" onclick="loadCode('C++_ex2')">Exercise2: Calculate the sum of two numbers</a></li>
+                <li><a href="#" class="exercise-item" onclick="loadCode('C++_ex3')">Exercise3: Check prime numbers</a></li>
+            </ul>
+        </section>
+        <div class="back-container">
+            <a href="language.html" class="back-icon">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    </main>
+
+    <aside class="code-container">
+        <h2>Write Code</h2>
+        <textarea id="user-code" rows="10" placeholder="Write your code here..."></textarea>
+        <button id="check-code" onclick="checkCode()">Check-Code</button>
+        <h2>Ex Source Code</h2>
+        <pre><code id="code-preview">Select exercise to see code here.</code></pre> 
+    </aside>
+
+    <!-- Modal để hiển thị kết quả so sánh -->
+    <div id="comparison-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Comparison Results</h2>
+            <table>
+                <tr>
+                    <th>Given Code</th>
+                    <th>Your Code</th>
+                </tr>
+                <tr>
+                    <td><pre id="expected-code"></pre></td>
+                    <td><pre id="user-code-comparison"></pre></td>
+                </tr>
+            </table>
+            <button id="submit-button" onclick="submitCode()" style="margin-top: 20px;">Nộp Bài</button> <!-- Thêm nút nộp bài -->
+        </div>
+    </div>
+
+    <div id="timer" style="font-size: 20px; margin-top: 20px;"></div>
+
+    <script>
+        let expectedCode = '';
+        let timeLimit = 600; // Thời gian làm bài (10 phút = 600 giây)
+        let timerInterval;
+
+        function startTimer() {
+            const timerDisplay = document.getElementById('timer');
+            timerDisplay.textContent = formatTime(timeLimit);
+            
+            timerInterval = setInterval(() => {
+                timeLimit--;
+                timerDisplay.textContent = formatTime(timeLimit);
+                
+                if (timeLimit <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Thời gian làm bài đã hết!");
+                    document.getElementById('user-code').disabled = true; // Không cho phép nhập mã khi hết thời gian
+                }
+            }, 1000);
+        }
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    }
+
+    // Hàm loadCode đã được cập nhật để bắt đầu đồng hồ
+
+        function loadCode(exercise) {
+            const codePreview = document.getElementById('code-preview');
+            const userCode = document.getElementById('user-code');
+            userCode.value = ''; // Xóa nội dung textarea khi chọn bài tập mới
+
+            startTimer();
+            
+            switch (exercise) {
+                case 'C++_ex1':
+                    expectedCode = `// Bài Tập 1: In ra "Hello, World!"\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println("Hello, World!");\n    }\n}`;
+                    break;
+                case 'C++_ex2':
+                    expectedCode = `// Bài Tập 2: Tính tổng hai số\nimport java.util.Scanner;\npublic class Sum {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        int a = scanner.nextInt();\n        int b = scanner.nextInt();\n        System.out.println("Tổng: " + (a + b));\n    }\n}`;
+                    break;
+                case 'C++_ex3':
+                    expectedCode = `// Bài Tập 3: Kiểm tra số nguyên tố\npublic class PrimeCheck {\n    public static void main(String[] args) {\n        // Kiểm tra số nguyên tố\n    }\n}`;
+                    break;
+                default:
+                    expectedCode = 'Chọn bài tập để xem mã ở đây.';
+            }
+            codePreview.textContent = expectedCode;
+        }
+
+        function checkCode() {
+            const userCode = document.getElementById('user-code').value;
+            document.getElementById('expected-code').textContent = expectedCode;
+            document.getElementById('user-code-comparison').textContent = userCode;
+            document.getElementById('comparison-modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('comparison-modal').style.display = 'none';
+        }
+
+         function submitCode() {
+    const userCode = document.getElementById('user-code').value;
+    const resultMessage = document.getElementById('result-message');
+    
+    if (userCode.trim() === '') {
+        alert('Vui lòng viết mã trước khi nộp bài!');
+    } else {
+         // Dừng đồng hồ đếm ngược
+         clearInterval(timerInterval);
+
+        // Xử lý việc nộp bài (ví dụ: gửi mã đến server, lưu trữ, v.v.)
+        alert('Bài của bạn đã được nộp thành công!');
+        
+        // Có thể thêm các bước khác như lưu mã, chuyển trang, v.v.
+        closeModal(); // Đóng modal sau khi nộp bài
+    }
+}
+    </script>
+
+<style>
+    /* CSS cho form thêm bài tập */
+    #add-exercise-form {
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: #f9f9f9;
+        margin: 10px 0;
+    }
+
+    #add-exercise-form input, 
+    #add-exercise-form textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: gray ; /* Màu nền */
+        color: white; /* Màu chữ */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer; /* Thay đổi con trỏ khi hover */
+    }
+
+    button:hover {
+        background-color: black; /* Màu nền khi hover */
+    }
+</style>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xếp Hạng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ranking-container">
+        <h2>Xếp Hạng Tài Khoản</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên Tài Khoản</th>
+                    <th>Số Bài Tập Hoàn Thành</th>
+                </tr>
+            </thead>
+            <tbody id="rankingList">
+                <!-- Danh sách tài khoản sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+        <div class="back-container">
+            <a href="home.html" class="back-icon">Quay lại</a>
+        </div>
+    </div>
+
+    <script>
+        // Dữ liệu xếp hạng (thay thế bằng dữ liệu thực tế)
+        const rankings = [
+            { username: 'Adidas', completedExercises: 10 },
+            { username: 'Nike', completedExercises: 8 },
+            { username: 'Newbalance', completedExercises: 12 },
+            { username: 'Nosux', completedExercises: 15 },
+            { username: 'Ahihi', completedExercises: 5 },
+        ];
+
+        // Sắp xếp mảng theo số bài tập hoàn thành từ cao xuống thấp
+        rankings.sort((a, b) => b.completedExercises - a.completedExercises);
+
+        const rankingList = document.getElementById('rankingList');
+
+        // Thêm dữ liệu vào bảng xếp hạng
+        rankings.forEach(user => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${user.username}</td>
+                <td>${user.completedExercises}</td>
+            `;
+            rankingList.appendChild(row);
+        });
+    </script>
+</body>
+</html>
+
