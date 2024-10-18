@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Documents</title>
+    <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+
+<header>
+    <h1>Share Files</h1>
+    <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterFiles()">
+    <button class="search-button" onclick="filterFiles()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk5rwKZhD-VJHZKGgbBzbew0eZHCMGJlGmtw&s" alt="Search">
+    </button>
+        </div>
+</header>
+
+<div class="container">
+    <nav class="sidebar">   
+        <ul>
+            <li>
+                <a href="#" class="toggle" onclick="toggleFiles()">My Files</a>
+                <ul class="sub-menu" id="myFiles">
+                    <li><a href="#" onclick="showFiles('yourfiles')">Files</a></li>
+                    <li><a href="#" onclick="showFiles('new')">New File</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="showTrashFiles()">Trash</a></li>
+            <li><a href="#" onclick="showRecentFiles()">Recent</a></li>
+            <li><a href="#" onclick="showShareWithMe()">Share with Me</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content" id="fileContent">
+        <h2>Documents being shared</h2>
+        
+        <div id="shareWithMeContainer" style="display: none;" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Drag and drop files here</h3>
+        </div>
+    </div>
+</div>
+
+<div id="fileDetails" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="fileName"></h2>
+        <p><strong>Last updated time:</strong> <span id="lastUpdated"></span></p>
+        <p><strong>Owner:</strong> <span id="owner"></span></p>
+        
+        <div id="relatedFiles" style="margin-top: 10px;">
+            <strong>Related Files:</strong>
+            <ul id="relatedFileList"></ul>
+        </div>
+
+        <div class="file-content" id="fileContentDetails">
+            <textarea id="editableContent" rows="4" style="width: 100%; display: none;"></textarea>
+            <p id="nonEditableContent"></p>
+        </div>
+        <div class="button-container">
+            <button onclick="editContent()">Edit Content</button>
+            <button onclick="saveContent()" style="display: none;" id="saveButton">Save Content</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="createFileModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCreateFileModal()">&times;</span>
+        <h2>Create New File</h2>
+        <label for="newFileName">File Name:</label>
+        <input type="text" id="newFileName" placeholder="Enter new file name">
+        <label for="newFileContent">Content:</label>
+        <textarea id="newFileContent" rows="4" placeholder="Enter new file content"></textarea>
+        <button onclick="createNewFile()">Create File</button>
+    </div>
+</div>
+
+<script src="scriptLap3.js"></script>
+
+</body>
+</html>
