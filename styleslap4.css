@@ -72,6 +72,7 @@ main {
 .activity-link, .my-learning-link {
     margin-left: auto;
     text-align: right;
+    color: blue;
 }
 .tabs {
     display: flex;
@@ -257,4 +258,7 @@ body {
 .link_edit {
     margin-left: auto;
     text-align: right;
+}
+#personalizeContainer {
+    border: 2px dashed #4a4a4a; /* Thay đổi kiểu viền thành dấu gạch ngang */
 }
