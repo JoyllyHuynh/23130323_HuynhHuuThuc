@@ -61,7 +61,7 @@
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                 <p style="margin: 0;">One ring down, one to go. Keep it up!</p>
                 <div class="activity-link">
-                    <a href="#all-activity" class="see-all-activity-link">See all activity</a>
+                    <a href="#all-activity" class="see-all-activity-link" style="color: blue;">See all activity</a>
                 </div>
             </div>
         </div>
@@ -220,20 +220,26 @@
         </div>
     </div>
 
-  <div id="personalizeContainer" class="personalize" style="position: relative; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+    <div id="personalizeContainer" class="personalize" style="position: relative; padding: 20px; border-radius: 8px; background: white;">
         <i class="fas fa-user-circle" style="font-size: 40px; color: #4a4a4a;"></i> <!-- Icon tài khoản -->
         <h2>Personalize your learning experience</h2>
         <p>Add your occupation and interests to get better content recommendation</p>
         
         <!-- Button that triggers file input -->
         <button onclick="document.getElementById('fileInput').click();">Add occupation and interests</button>
-    
+        
         <!-- Hidden file input -->
         <input type="file" id="fileInput" onchange="handleFileSelect(this)" style="display: none;">
-    
+        
         <!-- Icon to close the input area -->
         <i class="fas fa-times" style="font-size: 24px; color: #4a4a4a; cursor: pointer; position: absolute; top: 10px; right: 10px;" onclick="closeInputArea()"></i>
     </div>
+    
+    <style>
+        #personalizeContainer {
+            border: 2px dashed rgba(74, 74, 74, 0.5); /* Sử dụng màu với độ trong suốt 0.5 */
+        }
+    </style>
     
     <script>
         // Function to handle file input change event
