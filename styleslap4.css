@@ -1,0 +1,285 @@
+/*re1*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+.profile-image {
+    width: 100px; /* Kích thước hình ảnh */
+    height: 100px; /* Kích thước hình ảnh */
+    border-radius: 50%; /* Làm cho hình ảnh hình tròn */
+}
+
+.add-link {
+    display: inline-block;
+    margin-top: 20px; /* Khoảng cách với tiêu đề */
+    color: #007BFF; /* Màu của liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.add-link:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.info-box {
+    margin-top: 40px; /* Khoảng cách với phần trên */
+    padding: 15px;
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; /* Bo tròn các góc */
+    background-color: #f9f9f9; /* Màu nền */
+}
+
+.info-box h2 {
+    margin: 0; /* Bỏ khoảng cách cho tiêu đề */
+}
+
+.weekly-image {
+    width: 50px; /* Kích thước hình ảnh */
+    height: 50px; /* Kích thước hình ảnh */
+    border-radius: 50%; /* Làm cho hình ảnh hình tròn */
+}
+.activity-link, .my-learning-link {
+    margin-left: auto;
+    text-align: right;
+    color: blue;
+}
+.tabs {
+    display: flex;
+    margin-top: 20px;
+}
+.tab {
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.tab:hover {
+    background-color: #e0e0e0;
+}
+
+.activity-link, .my-learning-link {
+    margin-left: auto;
+    text-align: right;
+}
+.tabs {
+    display: flex;
+    margin-top: 20px;
+}
+.tab {
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.tab:hover {
+    background-color: #e0e0e0;
+}
+.card-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.arrow-icon {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.card {
+    flex: 1; /* Làm cho các thẻ có chiều rộng bằng nhau */
+    margin: 0 10px; /* Khoảng cách giữa các thẻ */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex; /* Sử dụng flexbox để đặt hình ảnh bên trái */
+    align-items: center; /* Căn giữa hình ảnh và văn bản */
+}
+.card img {
+    max-width: 100px; /* Đặt chiều rộng tối đa cho hình ảnh */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px; /* Khoảng cách giữa hình ảnh và văn bản */
+}
+.card:hover {
+    background-color: #e0e0e0;
+}
+.divider {
+    height: 2px; /* Độ dày của đường kẻ */
+    background-color: #ccc; /* Màu của đường kẻ */
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+.card {
+    position: relative; /* Make card position relative for absolute positioning of the icon */
+    margin: 20px; /* Add some margin */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+.more-options {
+    position: absolute; /* Position the icon absolutely */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/*re2*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.sad-link {
+    color: #fff;
+    padding: 0px 0px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.sad-link:hover {
+    background-color: #666;
+}
+.courses {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.course-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1;
+}
+.course-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 0px;
+}
+.course-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+.course-card p {
+    margin: 5px 0;
+    color: #777;
+}
+.personalize {
+    border: 1px dashed rgba(0, 0, 0, 0.3);  /* Tạo viền gạch nhỏ màu đen */
+    border-radius: 0px;       /* Tạo góc bo tròn */
+    padding: 110px;             /* Khoảng cách giữa nội dung và viền */
+    margin: 20px 0;            /* Khoảng cách phía trên và dưới của khung */
+    background-color: #f8f9fa; /* Màu nền nhạt */
+    text-align: center;        /* Căn giữa nội dung */
+    width: 100%;  
+}
+.personalize i {
+    display: block;
+    margin: 0 auto 10px; /* Căn giữa và tạo khoảng cách dưới */
+}
+.personalize button {
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+.personalize button:hover {
+    background-color: gray;
+}
+.header {
+    display: flex;
+    justify-content: space-between; /* Aligns title and link */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 0px; /* Space below header */
+}
+.header a {
+    text-decoration: underline; /* Adds underline to the link */
+    color: blue; /* Link color */
+    font-weight: normal; /* Normal font weight for the link */
+    font-size: 12px; /* Smaller font size */
+    margin-left: 200px; /* Minimal space between title and link */
+}
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.star {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 2px;
+}
+.half {
+    clip-path: inset(0 50% 0 0);  /* Clip the right half of the star to make it appear as half-filled */
+    fill: gold;  /* Gold color */
+}
+#fileInput {
+    display: none;
+}
+
+.link_edit {
+    margin-left: auto;
+    text-align: right;
+}
+
+#personalizeContainer {
+    border: 2px dashed #4a4a4a; /* Thay đổi kiểu viền thành dấu gạch ngang */
+}
