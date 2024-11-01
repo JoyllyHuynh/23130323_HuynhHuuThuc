@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: left; /* Change text alignment to left */
+}
+
+header h1 {
+  font-size: 2.5rem; /* Increase font size for a larger title */
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 0.9rem;
+}
+
+header a {
+  color: #fff; /* Set link color to white */
+  text-decoration: none; /* Optional: remove underline */
+}
+
+header a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
+.exclamation-icon {
+  color: #fff; /* Set color to white */
+  font-weight: bold;
+  margin: 0 5px; /* Add spacing around the icon */
+}
+
+.nav-tabs {
+  display: flex;
+  background-color: #333;
+  flex-direction: row; /* Arrange buttons in a horizontal row */
+  justify-content: flex-start; /* Align buttons to the left */
+  gap: 10px; /* Add space between buttons */
+}
+
+.nav-tabs button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+
+.nav-tabs button:hover::after,
+.nav-tabs button:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background-color: #fff; /* Color of the underline */
+  border-radius: 0px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  flex-direction: row; /* Arrange filters in a horizontal row */
+  gap: 5px; /* Reduce gap between items */
+  padding: 10px 0;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.sort-dropdown, .sort-dropdown option {
+  font-weight: bold;
+}
+
+.sort-filter {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.sort-filter label {
+  margin-right: 5px;
+}
+
+.sort-filter select {
+  margin-right: 15px;
+}
+
+/* Style the search field */
+form.example {
+  margin-left: 160px;
+  display: flex; /* Use flexbox for alignment */
+  width: 30%; /* Full width of the parent */
+}
+
+form.example input[type=text] {
+  padding: 8px;
+  font-size: 17px;
+  border: 1px solid grey;
+  width: 80%;
+  background: #f1f1f1;
+  border-radius: 0px 0 0 0px; /* Rounded corners for left side */
+}
+
+/* Style the submit button */
+form.example button {
+  width: 10%;
+  padding: 8px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  border-radius: 0 0px 0px 0; /* Rounded corners for right side */
+  cursor: pointer;
+}
+
+.filters button {
+  padding: 8px 12px; /* Adjust padding for smaller buttons */
+  font-size: 0.9rem; /* Reduce font size if needed */
+  cursor: pointer;
+}
+
+.filters select,
+.filters input[type="text"] {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.courses {
+  display: grid; /* Use grid layout for courses */
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 20px; /* Space between cards */
+  margin: 20px; /* Margin around the main area */
+}
+
+.course-card {
+  position: relative; /* Make the card a positioned element */
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+
+}
+
+.course-card img {
+  width: 100%; /* Image takes full width */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Cover the area without distortion */
+}
+
+.dot-icon {
+  position: absolute; /* Positioning relative to .course-card */
+  top: 8px; /* Distance from the top */
+  right: 8px; /* Distance from the right */
+  font-size: 25px; /* Size of the icon */
+  color: black; /* Icon color */
+  background-color: white; /* Background color */
+  border-radius: 0%; /* Make it circular */
+  padding: 5px; /* Padding around the icon */
+  cursor: pointer; /* Pointer cursor on hover */
+  z-index: 10; /* Ensure it stays on top */
+  text-align: center; /* Center the text */
+  border: none; /* Remove any border */
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Optional: Add a slight shadow for depth */
+}
+
+.dot-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Change background on hover for visibility */
+}
+
+.course-card h3 {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.translucent-text {
+  color: rgba(0, 0, 0, 0.5); /* Black text with 50% opacity */
+  font-size: 16px; /* Font size */
+  margin: 5px 0; /* Space above and below the text */
+  text-align: left; /* Center the text */
+}
+
+.progress-bar-container {
+  width: 100%; /* Full width of the card */
+  background-color: #f0f0f0; /* Light gray background for the container */
+  border-radius: 5px; /* Rounded corners */
+  margin: 10px 0; /* Space above and below the bar */
+}
+
+.progress-bar {
+  height: 3px; /* Height of the progress bar */
+  background-color: blueviolet; /* Green color for the progress */
+  border-radius: 5px; /* Rounded corners for the progress bar */
+}
+.completion-text {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between text and stars */
+  align-items: center; /* Center items vertically */
+  margin-top: 5px; /* Space above the text */
+}
+
+.star-icons1 {
+  display: flex; /* Align stars in a row */
+  color: white;
+  fill: currentColor;
+  stroke: gold;
+  stroke-width: 1px;
+}
+
+.star-icons {
+  display: flex; /* Align stars in a row */
+  color: gold;
+}
+
+.star {
+  width: 18px; /* Size of the star */
+  height: 18px; /* Size of the star */
+  border: none;
+}
+
+.huhu-text {
+  display: block; /* Ensure it appears on a new line */
+  margin-top: 5px; /* Space above the text */
+  font-size: 14px; /* Font size */
+  color: rgba(0, 0, 0, 0.7); /* Translucent color */
+  text-align: right; /* Center align if needed */
+}
+
+
+
+

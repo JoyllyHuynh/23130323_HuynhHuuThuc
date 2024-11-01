@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Learning Dashboard</title>
+  <link rel="stylesheet" href="lap5.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>My Learning</h1>
+        <p><span id="time-watched">87hr 36min</span> watched <span class="exclamation-icon">!</span> <a href="#">View all activity</a></p>
+    </header>
+    
+    <nav class="nav-tabs">
+        <button>All courses</button>
+        <a href="learningpaths.html"><button>Learning paths</button></a>
+        <button>Certifications</button>
+        <button>Archived</button>
+        <button>Learning tools</button>
+    </nav>
+
+    <section class="filters">
+        <div class="sort-filter">
+            <label for="sort-by">Sort By:</label>
+            <select id="sort-by" class="sort-dropdown">
+                <option value="recently-accessed">Recently Accessed</option>
+                <option value="most-popular">Most Popular</option>
+                <option value="highest-rated">Highest Rated</option>
+            </select>
+
+            <label for="filter-by">Filter By:</label>
+            <select id="filter-by" class="sort-dropdown">
+                <option value="all">All Categories</option>
+                <option value="category-1">Category 1</option>
+                <option value="category-2">Category 2</option>
+                <option value="category-3">Category 3</option>
+            </select>
+
+            <select id="orther" class="sort-dropdown">
+                <option>Progress</option>
+            </select>
+            <select id="orther" class="sort-dropdown">
+                <option>Instructor</option>
+            </select>
+
+        </div>
+
+
+        
+        <!-- Reset -->
+        <p>Reset</p>
+            
+        <!-- Search Input with Icon -->
+        <form class="example">
+            <input type="text" placeholder="Search my courses..." name="search2">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+    </section>
+
+    <main class="courses">
+        <div class="course-card">
+            <img src="Lap5image1.png" alt="Course Thumbnail">
+            <span class="dot-icon">⋮</span> <!-- Three vertical dot icon -->
+            <h3>FPT_ISMS Refresh Training S2 2024 (Vietnamese)</h3>
+            <p class="translucent-text">FSOFT Content Development</p> 
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 100%;"></div> <!-- Change the width as needed -->
+            </div>
+            <p class="completion-text">
+                100% complete 
+                <span class="star-icons1">
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                </span>
+            </p>
+            <span class="huhu-text">Leave a rating</span> <!-- New text below stars -->
+                    </div>
+        
+        <div class="course-card">
+            <img src="Lap5image2.png" alt="Course Thumbnail">
+            <span class="dot-icon">⋮</span> <!-- Three vertical dot icon -->
+            <h3>The Complete Spring Boot Development Bootcamp</h3>
+            <p class="translucent-text">Learn The Part Inc, Rayan Slim Jose...</p> 
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 100%;"></div> <!-- Change the width as needed -->
+            </div>
+            <p class="completion-text">
+                100% complete 
+                <span class="star-icons1">
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                </span>
+            </p>
+            <span class="huhu-text">Leave a rating</span> <!-- New text below stars -->
+                    </div>
+
+        <div class="course-card">
+            <img src="Lap5image3.png" alt="Course Thumbnail">
+            <span class="dot-icon">⋮</span> <!-- Three vertical dot icon -->
+            <h3>MuleSort 4.X Complete Guide For Beginners-Hands On...</h3>
+            <p class="translucent-text">Chinna Reddy</p> 
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 1%;"></div> <!-- Change the width as needed -->
+            </div>
+            <p class="completion-text">
+                1% complete 
+                <span class="star-icons1">
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                </span>
+            </p>
+            <span class="huhu-text">Leave a rating</span> <!-- New text below stars -->
+                    </div>
+
+        <div class="course-card">
+            <img src="Lap5image4.png" alt="Course Thumbnail">
+            <span class="dot-icon">⋮</span> <!-- Three vertical dot icon -->
+            <h3>English Vocabulary: 504 Essential Words through 7...</h3>
+            <p class="translucent-text">Mister Raibiey</p> 
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 15%;"></div> <!-- Change the width as needed -->
+            </div>
+            <p class="completion-text">
+                15% complete 
+                <span class="star-icons">
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                </span>
+            </p>
+            <span class="huhu-text">Leave a rating</span> <!-- New text below stars -->
+                    </div>
+
+        <div class="course-card">
+            <img src="https://tutortwist.com/wp-content/uploads/2024/08/2045310_f8a2_7-788x443.jpg" alt="Course Thumbnail">
+            <span class="dot-icon">⋮</span> <!-- Three vertical dot icon -->
+            <h3>Build a Backend REST API with...</h3>
+            <p class="translucent-text">Josson Part</p> 
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 75%;"></div> <!-- Change the width as needed -->
+            </div>
+            <p class="completion-text">
+                75% complete 
+                <span class="star-icons">
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                </span>
+            </p>
+            <span class="huhu-text">Leave a rating</span> <!-- New text below stars -->
+                    </div>
+
+        <div class="course-card">
+            <img src="Lap5image6.png" alt="Course Thumbnail">
+            <span class="dot-icon">⋮</span> <!-- Three vertical dot icon -->
+            <h3>ChatGPT Python Programming: AI Guied  </h3>
+            <p class="translucent-text">Khally Rogia</p> 
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 69%;"></div> <!-- Change the width as needed -->
+            </div>
+            <p class="completion-text">
+                69% complete 
+                <span class="star-icons">
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                </span>
+            </p>
+            <span class="huhu-text">Leave a rating</span> <!-- New text below stars -->
+                    </div>
+
+        <div class="course-card">
+            <img src="Lap5image7.png" alt="Course Thumbnail">
+            <span class="dot-icon">⋮</span> <!-- Three vertical dot icon -->
+            <h3>Java Certification (1Z0-819) Topic wise Part 1</h3>
+            <p class="translucent-text">Hansama</p> 
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 43%;"></div> <!-- Change the width as needed -->
+            </div>
+            <p class="completion-text">
+                43% complete 
+                <span class="star-icons">
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                </span>
+            </p>
+            <span class="huhu-text">Leave a rating</span> <!-- New text below stars -->
+                    </div>
+
+        <div class="course-card">
+            <img src="Lap5image8.png" alt="Course Thumbnail">
+            <span class="dot-icon">⋮</span> <!-- Three vertical dot icon -->
+            <h3>FPT_PMP Training </h3>
+            <p class="translucent-text">Dried Myied</p> 
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 94%;"></div> <!-- Change the width as needed -->
+            </div>
+            <p class="completion-text">
+                94% complete 
+                <span class="star-icons">
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                </span>
+            </p>
+            <span class="huhu-text">Leave a rating</span> <!-- New text below stars -->
+                    </div>
+    </main>
+
+    <script src="Lap5scripts.js"></script>
+</body>
+</html>
