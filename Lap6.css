@@ -1,0 +1,450 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.modal {
+    width: 1200px; /* Increased width for a bigger page */
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px; /* Increased padding */
+    font-size: 26px; /* Increased font size */
+    font-weight: bold;
+    text-align: center;
+}
+
+.close-icon {
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: 15px; /* Space between text and icon */
+    font-size: 15px; /* Adjust size as needed */
+    color: #333; /* Change color as needed */
+}
+
+.form-container {
+    max-width: 100%; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container {
+    padding: 40px; /* Increased padding */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 25px; /* Increased gap between cards */
+}
+
+.card {
+    padding: 25px; /* Increased padding */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card h2 {
+    font-size: 20px; /* Increased font size */
+    font-weight: bold;
+    color: #333;
+}
+
+.card-image {
+    width: 150px; /* Set desired width */
+    height: 150px; /* Set desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover the box */
+    display: block;
+    margin: 0 auto; /* Center the images */
+}
+
+.badge {
+    background-color: #6c757d;
+    color: white;
+    padding: 6px 10px; /* Increased padding */
+    border-radius: 4px;
+    font-size: 16px; /* Increased font size */
+    margin-left: 5px;
+}
+
+p {
+    color: #666;
+    font-size: 18px; /* Increased font size */
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px; /* Increased padding */
+    font-size: 16px; /* Increased font size */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.continue-button {
+    color: white; /* White text color */
+    background-color: #007bff; /* Blue background color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 4px; /* Optional: round the edges */
+    cursor: pointer;
+}
+
+.continue-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.input {
+    width: 100%; /* Full width of container */
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box; /* Prevent padding from increasing width */
+}
+
+.open-ide {
+    position: relative;
+    color: white;
+    background-color: #2b3a42; /* Use your dark blue-gray color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex; /* Change to flex to align items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 8px; /* Space between text and icon */
+}
+
+/* Add the arrow icon as a pseudo-element */
+.open-ide::after {
+    content: "➔"; /* Right arrow Unicode character */
+    font-size: 1.2em;
+    color: white; /* Same color as button text */
+}
+
+.card-image {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.description-row {
+    display: flex;
+    align-items: center; /* Center-aligns items vertically */
+    gap: 10px; /* Adds space between the text and input field */
+}
+
+.frame {
+    padding: 15px;
+    border: 1px solid #ced4da; /* Light border to create a frame effect */
+    border-radius: 8px;
+    background-color: #f8f9fa; /* Light background color */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field, .description-row {
+    display: flex;
+    align-items: center;
+    color: gray;
+    gap: 10px;
+}
+
+.select {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.short-description {
+    flex-shrink: 0;
+    font-size: 0.9em; /* Make the text slightly smaller */
+    color: #6c757d; /* Gray color */
+}
+
+
+.description-input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    box-sizing: border-box;
+}
+
+
+.guide-button {
+    color: grey; /* Grey text color */
+    border: 1px solid grey; /* Grey border */
+    background-color: transparent; /* Transparent background */
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 4px; /* Optional: round the edges */
+    cursor: pointer;
+}
+
+.guide-button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+/* Responsive điều chỉnh cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .modal {
+        width: 90%; /* Chiều rộng modal 90% trên di động */
+        margin: 20px auto; /* Khoảng cách trên và dưới giảm */
+    }
+
+    .header {
+        font-size: 20px; /* Giảm kích thước font cho header */
+        padding: 15px; /* Giảm padding cho header */
+    }
+
+    .container {
+        padding: 20px; /* Giảm padding cho container */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột trên màn hình nhỏ */
+    }
+
+    .card {
+        padding: 15px; /* Giảm padding cho card */
+    }
+
+    .card h2 {
+        font-size: 18px; /* Giảm kích thước font cho tiêu đề trong card */
+    }
+
+    .badge {
+        font-size: 14px; /* Giảm kích thước font cho badge */
+    }
+
+    p {
+        font-size: 16px; /* Giảm kích thước font cho đoạn văn */
+    }
+
+    .input, .select, .description-input {
+        padding: 8px; /* Giảm padding cho các trường input */
+    }
+
+    button {
+        font-size: 14px; /* Giảm kích thước font cho nút bấm */
+    }
+
+    .open-ide {
+        font-size: 14px; /* Giảm kích thước font cho nút mở IDE */
+    }
+
+    .description-row {
+        flex-direction: column; /* Đặt chiều dọc cho hàng mô tả */
+    }
+
+    .field {
+        flex-direction: column; /* Đặt chiều dọc cho trường */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 18px; /* Giảm kích thước font cho header trên màn hình nhỏ */
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột trên màn hình rất nhỏ */
+    }
+
+    .card {
+        margin: 10px 0; /* Giảm khoảng cách giữa các card */
+    }
+}
+
+.open-non {
+    position: relative;
+    color: white;
+    background-color: #2b3a42; /* Use your dark blue-gray color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex; /* Change to flex to align items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between text and icon */
+}
+
+#text-area {
+    width: 100%;         /* Đặt độ rộng chiếm hết container */
+    max-width: 100%;     /* Ngăn không cho vượt quá container */
+    height: 150px;       /* Chiều cao cố định cho textarea */
+    padding: 10px;       /* Khoảng cách trong textarea */
+    border: 1px solid #ccc; /* Viền cho textarea */
+    border-radius: 4px;  /* Bo tròn góc */
+    font-size: 14px;     /* Kích thước chữ */
+    box-sizing: border-box; /* Bao gồm cả padding trong kích thước */
+    background-color: #f9f9f9; /* Màu nền */
+}
+
+.container_re3 {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    background-color: #f3f4f6;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 8px;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    border: none;
+    font-size: 15.5px;
+    color: #111827;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    color: black;
+    margin-left: 4px;
+    user-select: none;
+    margin-top: 10px;
+}
+
+.toolbar-button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #111827;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 18px;
+}
+
+.toolbar-button.bold {
+    font-weight: bold;
+}
+
+.toolbar-button.italic {
+    font-style: italic;
+}
+
+.toolbar-button.underline {
+    text-decoration: underline;
+}
+
+.container_re4 {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.dropdown_re4 {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #111827;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: #f3f4f6;
+}
+
+.test-case-label {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.info-icon {
+    font-size: 13px;
+    color: gray;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.test-case {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.test-case-input,
+.output-input {
+    width: 48%;
+    padding: 8px;
+    font-size: 14px;
+    color: #111827;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.arrow {
+    font-size: 16px;
+    color: #9ca3af;
+    margin: 0 8px;
+}
+
+.update-button {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #3b82f6;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.update-button:hover {
+    background-color: #2563eb;
+}

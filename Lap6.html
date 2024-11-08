@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Test Custom Challenge</title>
+    <link rel="stylesheet" href="Lap6.css">
+</head>
+<body>
+    <div class="modal" id="screen1">
+        <div class="header">
+            New unit test custom challenge
+        </div>
+        
+        <div class="container">
+            <div class="card">
+                <!-- Insert image above the JavaScript line -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ48Y7SrMYkcABuEI0wfCCWJZS5qUOF7zTK-g&s" alt="JavaScript Icon" class="card-image">
+                <h2>JavaScript <span class="badge">Mocha</span></h2>
+                <p>Use the Mocha testing framework and create unit tests to grade solutions.</p>
+                <button class="continue-button" onclick="openScreen2()">Continue</button>
+                <button class="guide-button">Guide</button>
+            </div>
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" alt="JavaScript Icon" class="card-image">
+                <h2>TypeScript <span class="badge">Mocha</span></h2>
+                <p>Use the Mocha testing framework and create unit tests to grade solutions.</p>
+                <button class="continue-button" onclick="openScreen2()">Continue</button>
+                <button class="guide-button">Guide</button>
+            </div>
+            <div class="card">
+                <img src="https://www.svgrepo.com/show/376344/python.svg" alt="JavaScript Icon" class="card-image">
+                <h2>Python <span class="badge">pytest</span></h2>
+                <p>Pytest is the most popular and fully-featured Python testing framework.</p>
+                <button class="continue-button" onclick="openScreen2()">Continue</button>
+                <button class="guide-button">Guide</button>
+            </div>
+            <div class="card">
+                <img src="https://icon2.cleanpng.com/20180823/hci/kisspng-brand-php-logo-computer-file-product-1713950783594.webp" alt="JavaScript Icon" class="card-image">
+                <h2>PHP <span class="badge">PHPUnit</span></h2>
+                <p>PHPUnit is a programmer-oriented testing framework for PHP.</p>
+                <button class="continue-button" onclick="openScreen2()">Continue</button>
+                <button class="guide-button">Guide</button>
+            </div>
+            <div class="card">
+                <img src="https://static-00.iconduck.com/assets.00/java-icon-256x256-k4ufhihr.png" alt="JavaScript Icon" class="card-image">
+                <h2>Java <span class="badge">JUnit</span></h2>
+                <p>JUnit is a popular unit-testing framework in the Java ecosystem.</p>
+                <button class="continue-button" onclick="openScreen2()">Continue</button>
+                <button class="guide-button">Guide</button>
+            </div>
+            <div class="card">
+                <img src="https://ih1.redbubble.net/image.1060781008.1021/st,small,845x845-pad,1000x1000,f8f8f8.u4.jpg" alt="JavaScript Icon" class="card-image">
+                <h2>Kotlin <span class="badge">JUnit</span></h2>
+                <p>JUnit is a popular unit-testing framework in the Kotlin ecosystem.</p>
+                <button class="continue-button" onclick="openScreen2()">Continue</button>
+                <button class="guide-button">Guide</button>
+            </div>
+        </div>
+    </div>
+
+       <!-- Modal for the second screen -->
+       <div class="modal" id="screen2" style="display: none;">
+        <div class="header">New unit test custom challenge</div>
+        <div class="form-container">
+            <input type="text" placeholder="Demo" class="input">
+            
+            <div class="frame">
+                <div class="field">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty" class="select">
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+            
+                <div class="description-row">
+                    <p class="short-description">Start coding your solution in the IDE:</p>
+                    <input type="text" placeholder="Optional short description about this challenge..." class="input description-input">
+                </div>
+            </div>
+
+            <button class="open-ide" onclick="returnToScreen1()">Click here to open the Java (JUnit) IDE and edit your code</button>
+        </div>
+    </div>
+
+    <div class="modal" id="screen3" style="display: none;">
+        <div class="header">Edit Custom Challenge</div>
+        <div class="form-container">
+            <p style="color: gray; font-size: 14px;">Last modified by <em>sontth1@fpt.com</em> on Apr 01 2024</p>
+            <input type="text" id="title" placeholder="DSA ET Opt7 01" class="input">
+
+            <div class="frame">
+                <div class="field">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty" class="select">
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+            
+                <div class="description-row">
+                    <p class="short-description">Short description:</p>
+                    <input type="text" placeholder="This is a private challenge" class="input description-input">
+                </div>
+            </div>
+
+            <div class="container_re3">
+                <!-- Toolbar with icons -->
+                <div class="toolbar">
+                    <div class="dropdown">
+                        <button class="dropdown-button">Normal</button>
+                        <span class="dropdown-arrow">▼</span>
+                    </div>
+                    <button class="toolbar-button bold">B</button>
+                    <button class="toolbar-button italic">I</button>
+                    <button class="toolbar-button underline">U</button>
+                    <button class="toolbar-button quote">❞</button>
+                    <button class="toolbar-button list">•</button>
+                    <button class="toolbar-button list-numbered">☰</button>
+                    <button class="toolbar-button list-numbered">⁝</button>
+                    <button class="toolbar-button image">🖼️</button>
+                    <button class="toolbar-button link">🔗</button>
+                    <button class="toolbar-button code">⇹</button>
+                </div>                
+        
+                <!-- Code area, like the example text in the image -->
+                <textarea  id="text-area">Write a program to count the number of elements as odd numbers in the array
+Example: Array A= { 12, 31, 25, 17, 40, 10, 29 }
+=> Number of elements as odd number in array A is : 4</textarea>
+            </div>
+
+            <button class="open-non" >✔ Starter code will automatically be generated for all 18 coding languages</button>
+
+            <div class="row">
+                <div class="column">
+                    <label class="label">Input type</label>
+                    <select class="dropdown_re4">
+                        <option>Array of integers</option>
+                        <!-- Additional options can go here -->
+                    </select>
+                </div>
+                <div class="column">
+                    <label class="label">Output type</label>
+                    <select class="dropdown_re4">
+                        <option>Integer</option>
+                        <!-- Additional options can go here -->
+                    </select>
+                </div>
+            </div>
+        
+            <label class="label test-case-label">Required test cases <span class="info-icon">？</span></label>
+        
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="12, 31, 25, 17, 40, 10, 29">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="4">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1,2,3,4,5,6,7,8,9,10">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="5">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="10">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="0">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="0">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="1">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="0, 2, 4, 6, 8. 10">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="0">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1, 3, 5">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="3">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="Input 8">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="0">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="8, 8, 8, 8, 8, 8, 8, 8, 8, 8">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="0">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="13">
+            </div>
+            <button class="update-button" onclick="returnToScreen2()">Update custom challenge</button>
+        </div>
+    </div>
+
+    <script src="Lap6.js"></script>
+</body>
+</html>
