@@ -1,161 +1,139 @@
+/* style.css */
+
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    background: url('https://cdn.wallpapersafari.com/83/87/homjEO.jpg');
     padding: 0;
-    background-color: #f9f9f9; /* Màu nền chính */
-    justify-content: center;
-    align-items: center;
-    height: 100vh;  
-    position: relative;
+    line-height: 1.6;
+    color: #333;
 }
-.overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
-            z-index: 1; /* Đặt overlay dưới form */
-}
-.form-container {
-    position: relative;
-    z-index: 2; /* Đặt form lên trên overlay */
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-}
-label {
-    margin-top: 10px;
-}
-input, select {
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-button {
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: black;
+
+a {
+    text-decoration: none;
     color: white;
-    cursor: pointer;
-}
-button[type="button"] {
-    background-color: gray; /* Red for cancel */
+    font-weight: bold;
 }
 
-#avatar-preview {
-    margin-top: 10px;
-    max-width: 100%;
-    max-height: 200px;
-    display: none; /* Hide by default */
+/* Header Section */
+.hero {
+    background: linear-gradient(to right, #333, gray);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
 }
 
-header {
-    background: #333;
-    padding: 10px;
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-nav ul {
+
+.nav-links {
     list-style: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-main {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.container {
     display: flex;
-    justify-content: center; /* Căn giữa */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    height: 63vh; /* Chiều cao của container */
-    margin: 0; /* Bỏ khoảng cách mặc định */
-}
-.container a img {
-    width: 300px; /* Điều chỉnh kích thước ảnh */
-    transition: transform 0.3s; /* Hiệu ứng khi di chuột qua ảnh */
-}
-.container a img:hover {
-    transform: scale(1.1); /* Phóng to ảnh khi di chuột qua */
-}
-.image-gallery {
-    display: flex;
-    justify-content: center; /* Căn giữa hình ảnh */
-    flex-wrap: wrap; /* Cho phép hình ảnh xuống dòng */
-    margin-top: 20px;
+    gap: 15px;
 }
 
-.image-gallery a {
-    margin: 10px; /* Khoảng cách giữa các hình ảnh */
-}
-
-.image-gallery img {
-    max-width: 150px; /* Đặt kích thước tối đa cho hình ảnh */
-    height: auto; /* Đảm bảo tỷ lệ hình ảnh không bị biến dạng */
-    border: 2px solid #333; /* Đường viền cho hình ảnh */
-    border-radius: 5px; /* Bo góc cho hình ảnh */
-    transition: transform 0.3s; 
-}
-.image-gallery a img:hover {
-    transform: scale(1.1);
-}
-
-.lab-buttons {
-    margin-top: 20px;
-    text-align: center;
-    display: flex; /* Sử dụng flexbox */
-    justify-content: center;
-}
-.button {
-    flex: 1; /* Để các nút có chiều rộng bằng nhau */
-    margin: 0 5px;
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: gray;
+.nav-links li a {
     color: white;
-    text-decoration: none;
+    padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-.button:hover {
-    background-color: black;
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
-.cv-section {
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+.hero-content p {
     margin-bottom: 20px;
-    background: #f9f9f9;
-    padding: 15px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background-color: white;
+    color: gray;
     border-radius: 5px;
+    transition: all 0.3s;
 }
-.job, .school {
-    margin-bottom: 10px;
+
+.btn-primary:hover {
+    background-color: gray;
+    color: white;
 }
-h3 {
-    color: black;
+
+/* Main Content Sections */
+main {
+    padding: 20px;
+    text-align: center;
 }
-h4 {
-    margin: 5px 0;
+
+/* About Section */
+.about {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* Services Section */
+.services {
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Contact Section */
+.contact {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
