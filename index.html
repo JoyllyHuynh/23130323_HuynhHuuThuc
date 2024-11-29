@@ -1,30 +1,69 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styless.css">
-    <title>Trang Chủ</title>
+    <title>IT Home</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <header>
+    <header class="hero">
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="lab.html">Lab</a></li>
             </ul>
         </nav>
+        <div class="hero-content">
+            <h1>Welcome to IT World</h1>
+            <p>Innovative Solutions for Your Digital Journey</p>
+            <a href="#services" class="btn-primary">Explore More</a>
+        </div>
     </header>
+
     <main>
-        </div>
-        <h1>Welcome to the home page</h1>
-        <h2>Free cv making website</h2>
-        <div class="container">
-            <a href="https://jobgovn.com/cv-xin-viec?gad_source=1&gclid=CjwKCAjw0t63BhAUEiwA5xP54eaorYdX7D9nE4TNg7FnuTpLeqx6yNXNXF5zKI7VHKDmoex7iEWtcRoCyokQAvD_BwE" target="_blank">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsa96QqRJKuOcuf8HOUbnm75MtJE7LofSSJw&s" alt="image jobgovn">
-            </a>
-        </div>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>
+                We are a team of passionate IT professionals specializing in software development, 
+                web design, and IT consulting. Our mission is to bring innovative and efficient 
+                solutions to businesses around the globe.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>Build fast, responsive, and modern websites tailored to your needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Mobile Apps</h3>
+                    <p>Create intuitive and user-friendly mobile applications for all platforms.</p>
+                </div>
+                <div class="card">
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud solutions to streamline your business operations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>
+                Have a project in mind? We'd love to hear from you. Reach out to us today and let's make your ideas a reality.
+            </p>
+            <a href="contact.html" class="btn-secondary">Get in Touch</a>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 IT World | All rights reserved.</p>
+    </footer>
 </body>
 </html>
