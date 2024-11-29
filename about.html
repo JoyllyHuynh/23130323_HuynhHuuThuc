@@ -1,80 +1,114 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styless.css">
     <title>About</title>
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="lab.html">Lab</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-     
-        <h1>Curriculum vitae</h1>
-        
-        <section class="cv-section">
-            <h3>Huynh Huu Thuc</h3>
-            <p>Email: 23130323@st.hcmuaf.edu.vn</p>
-            <p>Phone: 0347138716</p>
-            <p>Address: 123 road ABC, City XYZ</p>
+    
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile">
+                <img src="imagehuuthuc.png" alt="Profile Picture">
+                <h1>Huynh Huu Thuc</h1>
+                <p>Web Developer | Creative Thinker | Team Leader</p>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Thuc, a passionate web developer with over 5 years of experience 
+                in creating dynamic and user-friendly websites. I specialize in frontend and backend 
+                development and enjoy solving complex problems with innovative solutions.
+            </p>
         </section>
-        <section class="cv-section">
-            <h3>Introduce</h3>
-            <p>Dedicated and experienced Middle School Teacher with a passion for educating today&amp;amp;#39;s youth, and helping to support them academically, emotionally, and socially in the classroom. Adept at creating meaningful curriculum that meets all education standards and requirements, and engages the interest of students. Experienced at working with other teachers, school staff, and family members of students to ensure students receive valuable support from those around them. Knowledgeable and experienced in Common Core, test prep, and teaching advanced mathematics.</p>
+
+        <!-- Personal Info Section -->
+        <section class="personal-info">
+            <h2>Personal Information</h2>
+            <div class="info-grid">
+                <div>
+                    <strong>Email:</strong>
+                    <p>23130323@st.hcmuaf.edu.vn</p>
+                </div>
+                <div>
+                    <strong>Phone:</strong>
+                    <p>+84 471 387 16</p>
+                </div>
+                <div>
+                    <strong>LinkedIn:</strong>
+                    <p><a href="#">linkedin.com/in/johndoe</a></p>
+                </div>
+                <div>
+                    <strong>Website:</strong>
+                    <p><a href="#">https://joyllyhuynh.github.io/23130323_HuynhHuuThuc/index.html</a></p>
+                </div>
+            </div>
         </section>
-        <section class="cv-section">
-            <h3>Work Experience</h3>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skill-list">
+                <div>
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React, Node.js</li>
+                        <li>SQL, MongoDB</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Team Collaboration</li>
+                        <li>Problem Solving</li>
+                        <li>Effective Communication</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="experience">
+            <h2>Work Experience</h2>
             <div class="job">
-                <h4>XYZ Company</h4>
-                <p>Position: Programmer</p>
-                <p>Period: 2020 - present</p>
+                <h3>Team Lead | Group2 Ltd</h3>
+                <p><em>2020 - Present</em></p>
                 <ul>
-                    <li>Develop and maintain web applications.</li>
-                    <li>Collaborate with design teams to improve user experience.</li>
+                    <li>Led a team of 5 developers to deliver high-quality projects.</li>
+                    <li>Implemented microservices-based architecture for scalability.</li>
                 </ul>
             </div>
             <div class="job">
-                <h4>ABC Company</h4>
-                <p>Position: Intern</p>
-                <p>Time: 2019 - 2020</p>
+                <h3>Web Developer | ABC Corp</h3>
+                <p><em>2016 - 2020</em></p>
                 <ul>
-                    <li>Support the development of small projects.</li>
-                    <li>Participate in team meetings to discuss work progress.</li>
+                    <li>Developed and maintained responsive e-commerce websites.</li>
+                    <li>Optimized code to improve system performance by 30%.</li>
                 </ul>
             </div>
         </section>
-        <section class="cv-section">
-            <h3>Education</h3>
-            <div class="school">
-                <h4>University Nong Lam</h4>
-                <p>Major: Computer Science</p>
-                <p>Graduation Year: 2019</p>
-                <a href="https://www.hcmuaf.edu.vn/">Nong Lam University</a>
-            </div>
-        </section>
-        <section class="cv-section">
-            <h3>Skill</h3>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Node.js</li>
-                <li>SQL database management</li>
-                <li>Communication and teamwork</li>
-            </ul>
-        </section>
-        
+
+        <!-- Footer -->
         <footer>
-            <p>Update date:28/09/2024</p>
-            <img src="file:///C:/Users/ADMIN/Downloads/Huynh%20Huu%20Thuc.pdf" alt="File CV">
+            <p>&copy; 2024 Huynh Huu Thuc | All rights reserved.</p>
         </footer>
-        
-    </main>
+    </div>
 </body>
 </html>
