@@ -1,0 +1,142 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://cdn.wallpapersafari.com/83/87/homjEO.jpg');
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #333, gray);
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center-align the nav items */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 0px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: gray;
+}
+
+.container {
+    max-width: flex;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+.profile h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile p {
+    font-size: 16px;
+}
+
+/* Section Titles */
+section h2 {
+    color: black;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Personal Info Section */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.info-grid div {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+.skill-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-list div {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.skill-list div:last-child {
+    margin-right: 0;
+}
+
+.skill-list h3 {
+    margin-top: 0;
+}
+
+/* Work Experience Section */
+.job {
+    margin-bottom: 15px;
+}
+
+.job h3 {
+    margin: 0;
+    color: #333;
+}
+
+.job p {
+    font-style: italic;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
